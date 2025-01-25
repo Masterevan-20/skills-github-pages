@@ -1,20 +1,24 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f0f0f0;
+    background: #ffcccb;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
     text-align: center;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
 }
 
 h1 {
@@ -41,6 +45,7 @@ h1 {
     position: relative;
     max-width: 100%;
     margin: auto;
+    z-index: 1;
 }
 
 .mySlides {
@@ -59,4 +64,57 @@ img {
 @keyframes fade {
     from { opacity: .4 }
     to { opacity: 1 }
+}
+
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: red;
+    margin: 0;
+    transform: rotate(-45deg);
+    animation: float 5s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0;
+}
+
+.heart:after {
+    left: 25px;
+    top: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
