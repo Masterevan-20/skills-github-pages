@@ -11,10 +11,10 @@
         <h1>Kỷ Niệm 2 Năm Yêu Nhau</h1>
         <div class="slideshow-container">
             <div class="mySlides fade">
-                <img src="image1.jpg" style="width:100%">
+                <img src="images/image1.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="image2.jpg" style="width:100%">
+                <img src="images/image2.jpg" style="width:100%">
             </div>
             <!-- Add more images as needed -->
         </div>
@@ -25,5 +25,31 @@
         </div>
     </div>
     <script src="scripts.js"></script>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+
+        document.addEventListener('click', function(e) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = e.clientX - 25 + 'px';
+            heart.style.top = e.clientY - 25 + 'px';
+            heart.style.animation = 'pop 0.5s ease';
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 500);
+        });
+    </script>
 </body>
 </html>
