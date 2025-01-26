@@ -7,8 +7,10 @@ function showSlides() {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+    slideIndex += 6;
+    if (slideIndex >= slides.length) {slideIndex = 0}
+    for (i = slideIndex; i < slideIndex + 6; i++) {
+        slides[i % slides.length].style.display = "inline-block";  
+    }
+    setTimeout(showSlides, 2500); // Change image every 2.5 seconds
 }
