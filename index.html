@@ -55,6 +55,7 @@
             heart.classList.add('heart');
             heart.style.left = e.clientX - 25 + 'px';
             heart.style.top = e.clientY - 25 + 'px';
+            heart.style.zIndex = 1000; // Ensure heart is on top
             heart.style.animation = 'pop 0.5s ease';
             document.body.appendChild(heart);
 
@@ -63,6 +64,7 @@
             img.classList.add('floating-img');
             img.style.left = e.clientX - 50 + 'px';
             img.style.top = e.clientY - 50 + 'px';
+            img.style.zIndex = 999; // Ensure image is below heart
             document.body.appendChild(img);
 
             setTimeout(() => {
