@@ -39,6 +39,7 @@
         <div class="text-container">
             <p>Mừng kỉ niệm 2 năm nhaaaaaaaaaaaaaaa!</p>
             <p>Tui iu cậu rất nhiều!</p>
+            <p>Bấm vào màn hình đi á</p>
         </div>
     </div>
     <script src="scripts.js"></script>
@@ -64,7 +65,7 @@
             img.classList.add('floating-img');
             img.style.left = e.clientX - 50 + 'px';
             img.style.top = e.clientY - 50 + 'px';
-            img.style.zIndex = 999; // Ensure image is below heart
+            img.style.zIndex = 1000; // Ensure image is above all elements
             document.body.appendChild(img);
 
             setTimeout(() => {
