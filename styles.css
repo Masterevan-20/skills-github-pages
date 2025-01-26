@@ -79,7 +79,7 @@ h1 {
     background: red;
     margin: 0;
     transform: rotate(-45deg);
-    animation: float 5s infinite;
+    animation: float 10s infinite; /* Slower animation */
     z-index: 1000;
 }
 
@@ -131,17 +131,6 @@ h1 {
     width: 100px;
     height: 100px;
     border-radius: 8px;
-    animation: floatImg 5s infinite;
     z-index: 1000;
-}
-
-@keyframes floatImg {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-1000px);
-        opacity: 0;
-    }
+    /* Remove animation to keep the image stationary */
 }
