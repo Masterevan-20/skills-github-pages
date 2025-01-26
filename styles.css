@@ -132,7 +132,7 @@ h1 {
     height: 100px;
     border-radius: 8px;
     animation: floatImg 5s infinite;
-    z-index: 999;
+    z-index: 1000;
 }
 
 @keyframes floatImg {
