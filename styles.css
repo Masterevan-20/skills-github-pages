@@ -80,6 +80,7 @@ h1 {
     margin: 0;
     transform: rotate(-45deg);
     animation: float 5s infinite;
+    z-index: 1000;
 }
 
 .heart:before,
@@ -131,6 +132,7 @@ h1 {
     height: 100px;
     border-radius: 8px;
     animation: floatImg 5s infinite;
+    z-index: 999;
 }
 
 @keyframes floatImg {
